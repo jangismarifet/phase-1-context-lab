@@ -1,4 +1,32 @@
 /* Your Code Here */
+function createEmployeeRecord(arr) {
+    return {
+        firstName: arr[0],
+        familyName: arr[1],
+        title: arr[2],
+        payPerHour: arr[3],
+        timeInEvents: [],
+        timeOutEvents: []
+    }
+}
+
+function createEmployeeRecords(arr) {
+    let arrOfEmployees = [];
+    for (let i = 0; i < arr.length; i++) {
+        arrOfEmployees.push(createEmployeeRecord(arr[i]))
+    }
+    return arrOfEmployees;
+}
+
+function createTimeInEvent(date) {
+    dateArray = date.split(" ")
+    let record = {
+        type: TimeIn,
+        hour: dateArray[1],
+        date: dateArray[0]
+    }
+    return record;
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
